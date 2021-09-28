@@ -19,18 +19,6 @@ dependencies {
     implementation 'net.dongliu:apk-parser:2.6.4'
     implementation 'org.slf4j:slf4j-api:1.7.26'
     implementation 'org.slf4j:slf4j-log4j12:1.7.26'
-    implementation 'commons-codec:commons-codec:1.10'
-    implementation 'commons-io:commons-io:2.7'
-    implementation 'commons-logging:commons-logging:1.1.3'
-    implementation 'com.github.zhkl0228:unicorn:1.0.12'
-    implementation 'com.github.zhkl0228:capstone:3.0.11'
-    implementation 'com.github.zhkl0228:keystone:0.9.5'
-    implementation 'com.github.zhkl0228:jna_silicon:4.5.2-1'
-    implementation 'com.github.zhkl0228:demumble:1.0.2'
-    implementation 'commons-codec:commons-codec:1.10'
-    implementation 'commons-io:commons-io:2.7'
-    implementation 'commons-logging:commons-logging:1.1.3'
-    implementation 'com.alibaba:fastjson:1.2.60'
 }
 
 test {
