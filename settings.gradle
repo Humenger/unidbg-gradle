@@ -1,0 +1,11 @@
+rootProject.name = 'unidbg-gradle'
+include 'unidbg-android'
+include 'unidbg-api'
+include 'untitled'
+include 'backend:kvm'
+findProject(':backend:kvm')?.name = 'kvm'
+include 'backend:hypervisor'
+findProject(':backend:hypervisor')?.name = 'hypervisor'
+include 'backend:dynarmic'
+findProject(':backend:dynarmic')?.name = 'dynarmic'
+
