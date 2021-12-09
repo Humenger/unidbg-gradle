@@ -19,10 +19,25 @@ import java.io.File;
 public class MainActivity {
 
     public static void main(String[] args) {
-        long start = System.currentTimeMillis();
-        MainActivity mainActivity = new MainActivity();
-        System.out.println("load offset=" + (System.currentTimeMillis() - start) + "ms");
-        mainActivity.crack();
+        StringBuffer builder=h("cu");
+        builder.append("s");
+        builder.append("e");
+        builder.append("r");
+        builder.append("i");
+        builder.append("d");
+        System.out.println("out:"+builder.toString());
+        System.out.println("out:"+builder.toString());
+        builder.append("k");
+        System.out.println("out:"+builder.toString());
+//        long start = System.currentTimeMillis();
+//        MainActivity mainActivity = new MainActivity();
+//        System.out.println("load offset=" + (System.currentTimeMillis() - start) + "ms");
+//        mainActivity.crack();
+    }
+    public static StringBuffer h(String str) {
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append(str);
+        return stringBuffer;
     }
 
     private final AndroidEmulator emulator;

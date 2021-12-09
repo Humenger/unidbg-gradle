@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.1'
+    implementation(project(':unidbg-api'))
+    implementation(project(':backend:kvm'))
+    implementation(project(':backend:hypervisor'))
+    implementation(project(':backend:dynarmic'))
+    implementation 'com.googlecode.plist:dd-plist:1.23'
+}
+
+test {
+    useJUnitPlatform()
+}

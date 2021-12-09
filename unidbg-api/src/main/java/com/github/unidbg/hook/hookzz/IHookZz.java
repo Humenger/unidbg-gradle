@@ -27,5 +27,4 @@ public interface IHookZz extends IHook {
 
     <T extends RegisterContext> void instrument(long functionAddress, InstrumentCallback<T> callback);
     <T extends RegisterContext> void instrument(Symbol symbol, InstrumentCallback<T> callback);
-
 }
