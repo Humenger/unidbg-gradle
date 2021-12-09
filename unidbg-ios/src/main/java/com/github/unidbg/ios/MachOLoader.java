@@ -100,9 +100,6 @@ public class MachOLoader extends AbstractLoader<DarwinFileIO> implements Memory,
         syscallHandler.addIOResolver((DarwinResolver) libraryResolver);
         super.setLibraryResolver(libraryResolver);
 
-        /*
-         * 注意打开顺序很重要
-         */
         syscallHandler.open(emulator, IO.STDIN, IOConstants.O_RDONLY);
         syscallHandler.open(emulator, IO.STDOUT, IOConstants.O_WRONLY);
         syscallHandler.open(emulator, IO.STDERR, IOConstants.O_WRONLY);
@@ -174,7 +171,6 @@ public class MachOLoader extends AbstractLoader<DarwinFileIO> implements Memory,
         final UnidbgPointer thread = allocateStack(UnidbgStructure.calculateSize(emulator.is64Bit() ? Pthread64.class : Pthread32.class)); // reserve space for pthread_internal_t
         Pthread pthread = Pthread.create(emulator, thread);
 
-        /* 0xa4必须固定，否则初始化objc会失败 */
         final UnidbgPointer tsd = pthread.getTSD(); // tsd size
         assert tsd != null;
         tsd.setPointer(__TSD_THREAD_SELF * emulator.getPointerSize(), thread);

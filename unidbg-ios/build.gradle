@@ -7,17 +7,20 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
     testImplementation 'junit:junit:4.13.1'
+
     implementation(project(':unidbg-api'))
     implementation(project(':backend:kvm'))
     implementation(project(':backend:hypervisor'))
     implementation(project(':backend:dynarmic'))
+    implementation 'log4j:log4j:1.2.17'
+    implementation 'net.dongliu:apk-parser:2.6.4'
+    implementation 'org.slf4j:slf4j-api:1.7.26'
+    implementation 'org.slf4j:slf4j-log4j12:1.7.26'
     implementation 'com.googlecode.plist:dd-plist:1.23'
-}
-
-test {
-    useJUnitPlatform()
+    implementation 'io.kaitai:kaitai-struct-runtime:0.8'
 }
